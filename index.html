@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÉKNX TAPE VOL.5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              card: "rgba(0,0,0,0.45)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes cover-pop {
+        from {
+          opacity: 0;
+          transform: scale(0.92);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .anim-title {
+        animation: fade-in-up 0.65s ease-out both;
+      }
+
+      .anim-cover {
+        animation: cover-pop 0.7s ease-out both;
+      }
+
+      .link-item {
+        opacity: 0;
+        animation: fade-in-up 0.55s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-black text-white antialiased">
+    <div class="fixed inset-0 -z-10">
+      <img
+        src="./COOVER 78.png"
+        alt="Fond coover 78"
+        class="h-full w-full object-cover scale-110 blur-2xl brightness-50"
+      />
+      <div class="absolute inset-0 bg-black/45"></div>
+    </div>
+
+    <main class="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 py-8">
+      <header class="mb-8 text-center">
+        <img
+          src="./COOVER 78.png"
+          alt="COOVER 78"
+          class="anim-cover mx-auto mb-4 aspect-square w-44 rounded-2xl object-cover shadow-2xl ring-1 ring-white/20"
+        />
+        <h1 class="anim-title text-2xl font-black uppercase tracking-wide [animation-delay:120ms]">
+          ÉKNX TAPE VOL.5
+        </h1>
+        <p class="anim-title mt-2 text-sm font-medium text-white/80 [animation-delay:220ms]">
+          20/03/2026
+        </p>
+      </header>
+
+      <section id="links" class="flex flex-col gap-3"></section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
